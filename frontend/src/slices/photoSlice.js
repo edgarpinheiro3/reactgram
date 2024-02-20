@@ -55,7 +55,7 @@ export const deletePhoto = createAsyncThunk(
     
     return data;
   }
-)
+);
 
 export const photoSlice = createSlice({
   name: "photo",
@@ -105,7 +105,7 @@ export const photoSlice = createSlice({
 
       state.photos = state.photos.filter((photo) => {
         return photo._id !== action.payload.id;
-      })
+      });
 
       state.message = action.payload.message;
     })
